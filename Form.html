@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./styles/Form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="inner-container">
+        <div class="very-inner-container">
+          <div class="function-container">
+            <div class="progress-container">
+              <div class="progress-inner-container">
+                <div class="progress-percentage-icon">0%</div>
+                <div class="profile-completeness">Profile Completeness</div>
+              </div>
+              <div class="lists-of-tasks-complete">
+                <ul>
+                  <li>Create Account</li>
+                  <li>Update Roadmap Progress</li>
+                  <li>Setup Public Profile</li>
+                  <li>Complete your first project</li>
+                  <li>Invite your Friends</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="details-container">
+            <form  action="about:blank" method="POST" autocomplete="on">
+              <div class="name-container">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="name" autocomplete="name" minlength="2" required>
+                <label for="email">Email</label>
+                <input type="email" name="username" id="email" autocomplete="username" required>
+              </div>
+              <div class="passwords-container">
+                <label for="Enter-Password">Enter Password</label>
+                <div class="for-password-container-positioning">
+                  <input type="password" id="Enter-Password" name="password" placeholder="xxxxxxxx"  autocomplete="new-password" pattern="^[A-Za-z\d@$!%*?&]{10,}$"   
+                  required>
+                  <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                  <i class="fa fa-eye-slash" data-target="#Enter-Password"></i>
+                  </button>
+                </div>
+                <label for="Verify-Password">Confirm Password</label>
+                <div class="for-password-container-positioning">
+                  <input type="password" name="confirm-password" id="Verify-Password" placeholder="xxxxxxxx" autocomplete="new-password" pattern="^[A-Za-z\d@$!%*?&]{10,}$" 
+                  required>
+                  <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                    <i class="fa fa-eye-slash" data-target="#Verify-Password"></i>
+                  </button>
+                </div>
+                
+              </div>
+                <input type="submit" value="Update Profile"
+                name="submit" id="submit-button">
+            </form>
+         </div>
+      </div>
+    </main>
+
+    <script src="./scripts/Form.js"></script>
+  </body>
+</html>
